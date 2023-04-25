@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+
+		body {
+			margin: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		select {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		.container fieldset {
+			margin: 0 auto;
+			max-width: 70%;
+		}
+
+		.container legend {
+			font-weight: bold;
+		}
+
+		#btn-enviar {
+			text-align: center;
+		}
+
+		#btn-enviar input {
+			margin: 1rem;
+			width: 6rem;
+			height: 2rem;
+			font-family: 'Poppins', sans-serif;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>Actividad</h2>
+	<div class="container">
+		<form action="#" method="post" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Datos personales</legend>
+				<table>
+					<tr colspan="3">
+						<td style="width: 15%; text-align: right;"><label for="txtdni">DNI:</label></td>
+						<td style="width: 55%;"><input type="text" name="dni" id="txtdni" style="width: 30%;"></td>
+						<td rowspan="3" style="width: 30%; padding-left: 3rem;">
+							Sexo:<br>
+							<input type="radio" name="sexo" value="hombre" id="hombre"><label for="hombre">Hombre</label><br>
+							<input type="radio" name="sexo" value="mujer" id="mujer"><label for="mujer">Mujer</label>
+						</td>
+					</tr>
+					<tr colspan="3">
+						<td style="width: 15%; text-align: right;"><label for="txtnombre">Nombre:</label></td>
+						<td style="width: 55%;"><input type="text" name="nombre" id="txtnombre" style="width: 90%;">
+						</td>
+					</tr>
+					<tr colspan="3">
+						<td style="width: 15%; text-align: right;"><label for="txtapellidos">Apellidos:</label></td>
+						<td style="width: 55%;"><input type="text" name="apellidos" id="txtapellidos"
+								style="width: 90%;"></td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Dirección</legend>
+				<table>
+					<tr colspan="2">
+						<td style="width: 15%; text-align: right;"><label for="txtcalle">Calle/Avda:</label></td>
+						<td style="width: 85%;" colspan="3">
+							<input style="width: 90%" type="text" name="calle/avda:" id="txtcalle">
+						</td>
+					</tr>
+					<tr colspan="4">
+						<td style="width: 15%; text-align: right;"><label for="txtpoblacion">Población:</label></td>
+						<td style="width: 50%;">
+							<input style="width: 90%;" type="text" name="poblacion" id="txtpoblacion">
+						</td>
+						<td style="width: 15%; text-align: right;"><label for="boxprovincia">Provincia:</label></td>
+						<td style="width: 20%;">
+							<select name="provincia" id="boxprovincia">
+								<option value="Barranca">Barranca</option>
+								<option value="Cajatambo">Cajatambo</option>
+								<option value="Canta">Canta</option>
+								<option value="Cañete">Cañete</option>
+								<option value="Huaral">Huaral</option>
+								<option value="Huarochirí">Huarochirí</option>
+								<option value="Huaura">Huaura</option>
+								<option value="Lima">Lima</option>
+								<option value="Oyón">Oyón</option>
+								<option value="Yauyos">Yauyos</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Práctica en grupo</legend>
+				<table>
+					<div>
+						<tr colspan="3">
+							<td style="width: 15%; text-align: right;">
+								<label for="txtarchivo">Archivo:</label>
+							</td>
+							<td style="width: 20%;">
+								<input type="text" id="txtarchivo">
+							</td>
+							<td colspan="2" style="width: 65%;">
+								<input type="file" name="file" id="file">
+							</td>
+						</tr>
+					</div>
+					<tr colspan="4">
+						<td style="text-align: right;">
+							<input type="checkbox" value="si" name="acomprimido" id="a_c">
+						</td>
+						<td>
+							<label for="a_c">archivo comprimido</label>
+						</td>
+						<td style="text-align: right;">
+							<input type="checkbox" value="si" name="aencriptado" id="a_e">
+						</td>
+						<td>
+							<label for="a_e">archivo encriptado</label>
+						</td>
+					</tr>
+					<tr colspan="2">
+						<td style="text-align: end;">
+							<label for="descripcion">Descripción de la práctica</label>
+						</td>
+						<td colspan="3">
+							<textarea name="descripcion" id="descripcion" cols="70" rows="5"></textarea>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<div id="btn-enviar">
+				<input type="submit" value="Enviar">
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
